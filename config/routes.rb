@@ -1,7 +1,6 @@
 Starrior::Application.routes.draw do
+  resources :users
   root to: 'static_pages#home'
-
-  get 'users/new'
 
   match '/signup',  to: 'users#new',            via: 'get'
   match '/help',    to: 'static_pages#help',    via: 'get'
